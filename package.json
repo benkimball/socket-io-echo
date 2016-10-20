@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.5",
-  "description": "A sample Node.js app using Express 4",
+  "name": "socket-io-echo",
+  "version": "1.0.0",
+  "description": "A barebones socket.io server that echoes input",
   "engines": {
     "node": "5.9.1"
   },
@@ -9,18 +9,13 @@
   "scripts": {
     "start": "node index.js"
   },
-  "dependencies": {
-    "ejs": "2.4.1",
-    "express": "4.13.3"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/liveoaktech/socket-io-echo"
   },
   "keywords": [
     "node",
-    "heroku",
-    "express"
+    "socket.io"
   ],
   "license": "MIT"
 }

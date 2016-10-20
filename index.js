@@ -1,20 +1,16 @@
-var express = require('express');
-var app = express();
+/* a most-basic socket.io echo server for use in testing. */
+var app = require('http').createServer(handler).listen(process.env.PORT || 8080);
 
-app.set('port', (process.env.PORT || 5000));
+function handler(req, res) {
+  res.writeHead(200);
+  res.end('index');
+}
 
-app.use(express.static(__dirname + '/public'));
+var io = require('socket.io')(app);
 
-// views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-
-app.get('/', function(request, response) {
-  response.render('pages/index');
+io.on('connection', function (socket) {
+  socket.on('message', function (msg) {
+    socket.send(msg);
+  });
+  socket.on('disconnect', function () { });
 });
-
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});
-
-

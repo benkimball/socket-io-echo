@@ -1,8 +1,8 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-getting-started",
+  "name": "Socket.IO Echo",
+  "description": "A barebones socket.io server that echoes input",
+  "repository": "https://github.com/liveoaktech/socket-io-echo",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
-  "keywords": ["node", "express", "static"],
+  "keywords": ["node", "socket.io"],
   "image": "heroku/nodejs"
 }
